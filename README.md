@@ -14,6 +14,8 @@ Download it from stackflow:
 ```python
 import requests, zipfile, io, os
 
+url = "https://info.stackoverflowsolutions.com/rs/719-EMH-566/images/stack-overflow-developer-survey-2021.zip"
+
 file = requests.get(url)
 zipf = zipfile.ZipFile(io.BytesIO(file.content))
 expracted_data = zipf.extractall(os.mkdir('./survey-data'))
