@@ -1,4 +1,4 @@
-# Stackoverflow Developers Salary Prediction
+# Stackoverflow Developer's Salary Prediction ML Data App
 
 ![Credit: flex jobs](https://fjwp.s3.amazonaws.com/blog/wp-content/uploads/2021/02/18095635/Salary-Range.png)
 ---
@@ -19,4 +19,4 @@ zipf = zipfile.ZipFile(io.BytesIO(file.content))
 expracted_data = zipf.extractall(os.mkdir('./survey-data'))
 ```
 
-*Follow the steps in the `ipynb` for further reference.
+**Follow the steps in the `ipynb` for further reference.**
