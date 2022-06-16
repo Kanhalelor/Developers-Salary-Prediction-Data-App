@@ -13,9 +13,9 @@ def load_data():
     url = "https://info.stackoverflowsolutions.com/rs/719-EMH-566/images/stack-overflow-developer-survey-2021.zip"
     file = requests.get(url)
     zipf = zipfile.ZipFile(io.BytesIO(file.content))
-    expracted_data = zipf.extractall('./')
+    expracted_data = zipf.extractall()
     # read data from a csv file
-    df = pd.read_csv('/content/survey_results_public.csv')
+    df = pd.read_csv('survey_results_public.csv')
     df = df[['Country', 'EdLevel', 'YearsCodePro', 'Employment', 'ConvertedCompYearly']]
     df = df.rename({"ConvertedCompYearly": "Salary"}, axis=1)
     df = df[df['Salary'].notnull()]
