@@ -21,4 +21,4 @@ zipf = zipfile.ZipFile(io.BytesIO(file.content))
 expracted_data = zipf.extractall(os.mkdir('./survey-data'))
 ```
 
-**Follow the steps in the `ipynb` for further reference.**
+**Follow the steps in the [`ipynb`](https://colab.research.google.com/drive/14lMUZjURIOUcP4JLf1KX-UN5xNgCJoGU?usp=sharing) for reference.**
