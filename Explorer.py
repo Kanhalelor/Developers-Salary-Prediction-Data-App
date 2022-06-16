@@ -8,7 +8,13 @@ from Helpers import clean_ed_level, clean_years_code_pro, shorten_categories
 # load data
 @st.cache
 def load_data():
-    df = pd.read_csv('./survey_results_public.csv')
+    # get survey data from stackoverflow
+    url = "https://info.stackoverflowsolutions.com/rs/719-EMH-566/images/stack-overflow-developer-survey-2021.zip"
+    file = requests.get(url)
+    zipf = zipfile.ZipFile(io.BytesIO(file.content))
+    expracted_data = zipf.extractall('./')
+    # read data from a csv file
+    df = pd.read_csv('/content/survey_results_public.csv')
     df = df[['Country', 'EdLevel', 'YearsCodePro', 'Employment', 'ConvertedCompYearly']]
     df = df.rename({"ConvertedCompYearly": "Salary"}, axis=1)
     df = df[df['Salary'].notnull()]
