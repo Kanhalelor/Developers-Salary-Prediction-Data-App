@@ -1,4 +1,4 @@
-from cProfile import label
+# Explorer page
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
