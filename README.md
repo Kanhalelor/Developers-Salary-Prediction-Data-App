@@ -22,3 +22,6 @@ expracted_data = zipf.extractall(os.mkdir('./survey-data'))
 ```
 
 **Follow the steps in the [`Colab Notebook`](https://colab.research.google.com/drive/14lMUZjURIOUcP4JLf1KX-UN5xNgCJoGU?usp=sharing) for reference.**
+---
+
+### Deployment -> [Live](https://share.streamlit.io/kanhalelor/developers-salary-prediction-data-app/main/App.py)
